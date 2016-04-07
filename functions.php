@@ -6,6 +6,9 @@
 
 	function signup($user, $pass){
 		
+		//hash the password
+		$pass = hash("sha512", $pass);
+		
 		
 		// GLOBALS - access outside variable in function
 		$mysql = new mysqli("localhost", $GLOBALS["db_username"], $GLOBALS["db_password"], "webpr2016_romil");
