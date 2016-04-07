@@ -7,6 +7,20 @@
 		//login
 		
 		echo "logging in ...";
+		
+		//the username and password are not empty
+		if(!empty($_POST["username"]) && !empty($_POST["password"])){
+			
+			//save to db
+			
+			login($_POST["username"], $_POST["password"]);
+			
+		}else{
+			
+			echo "both fields are required!";
+			
+		}
+		
 	
 	//signup button clicked
 	}else if(isset($_POST["signup"])){
